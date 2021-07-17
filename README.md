@@ -18,9 +18,9 @@ const onAdd = (product) => {
 
 장바구니에 담긴 상품 삭제
 ```javascript
-//수량이 1일 때 삭제할 경우 해당 상품만 제외하고 보여주고,
-  //그렇지 않은 경우는 원래 수량에서 -1
-  const onRemove = (product) => {
+const onRemove = (product) => {
+   //수량이 1일 때 삭제할 경우 해당 상품만 제외하고 보여주고,
+   //그렇지 않은 경우는 원래 수량에서 -1
     const exist = cartItems.find(item => item.id === product.id)
     if(exist.qty === 1){
       setCartItems(cartItems.filter(item => item.id !== product.id))
@@ -30,4 +30,12 @@ const onAdd = (product) => {
       )
     } 
   }
+```
+
+가격 합산하기
+```javascript
+const itemsPrice = cartItems.reduce((acc, cur) => acc + (cur.qty * cur.price), 0);
+const taxPrice = itemsPrice * 0.14;
+const shippingPrice = itemsPrice > 2000 ? 0 : 50;
+const totalPrice = itemsPrice + taxPrice + shippingPrice;
 ```
