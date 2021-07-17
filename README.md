@@ -39,3 +39,6 @@ const taxPrice = itemsPrice * 0.14;
 const shippingPrice = itemsPrice > 2000 ? 0 : 50;
 const totalPrice = itemsPrice + taxPrice + shippingPrice;
 ```
+
+<참고>
+https://www.youtube.com/watch?v=AmIdY1Eb8tY
