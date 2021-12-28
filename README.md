@@ -2,8 +2,6 @@
 
 ## 🛒 React Shopping Cart
 
-![psmall](https://user-images.githubusercontent.com/74355328/147529673-3f436250-3f10-4663-b574-d59e4c2bcbc6.gif)
-
 장바구니에 상품 추가
 ```javascript
 const onAdd = (product) => {
@@ -43,6 +41,8 @@ const taxPrice = itemsPrice * 0.14;
 const shippingPrice = itemsPrice > 2000 ? 0 : 50;
 const totalPrice = itemsPrice + taxPrice + shippingPrice;
 ```
+
+![psmall](https://user-images.githubusercontent.com/74355328/147529673-3f436250-3f10-4663-b574-d59e4c2bcbc6.gif)
 
 <참고>
 https://www.youtube.com/watch?v=AmIdY1Eb8tY
